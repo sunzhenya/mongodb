@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.kuvplus.blog.domain.Article;
 import com.kuvplus.common.mongodb.MongodbBaseDao;
-
+//import com.kuvplus.framework.common.page.Pagination;
 
 /**
  * ＤＡＯ层操作类
@@ -25,11 +25,11 @@ import com.kuvplus.common.mongodb.MongodbBaseDao;
 @Repository("ArticleDao")
 public class ArticleDao extends MongodbBaseDao<Article> {
 
-/*	public Pagination<Article> getPageArticle(int pageNo, int pageSize) {
+	/*public Pagination<Article> getPageArticle(int pageNo, int pageSize) {
 		Query query = new Query();
 		return this.getPage(pageNo, pageSize, query);
-	}
-*/
+	}*/
+
 	/**
 	 * 通过条件去查询
 	 * 

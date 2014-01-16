@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.kuvplus.blog.dao.ArticleDao;
 import com.kuvplus.blog.domain.Article;
+//import com.kuvplus.framework.common.page.Pagination;
 
 @Service("articleService")
 public class ArticleService {
@@ -25,11 +26,11 @@ public class ArticleService {
 	public Article save(Article bean) {
 		return (Article) articleDao.save(bean);
 	}
-
-/*	public Pagination<Article> getPageArticle(int pageNo, int pageSize) {
+/*
+	public Pagination<Article> getPageArticle(int pageNo, int pageSize) {
 		return articleDao.getPageArticle(pageNo, pageSize);
-	}*/
-
+	}
+*/
 	/**
 	 * 暂时只是固定去修改,会有下一篇博客,写高级修改...
 	 */

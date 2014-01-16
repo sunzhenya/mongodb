@@ -39,10 +39,10 @@ public class mongodbtest {
 		System.out.println(d.count());
 		System.out.println(d.getCursorId());
 		System.out.println(JSON.serialize(d));
-		DBObject user = new BasicDBObject();
+		/*DBObject user = new BasicDBObject();
 		user.put("title", "孙振亚");
 		user.put("content", "程序员");
-		System.out.println("---"+coll.save(user));
+		System.out.println("---"+coll.save(user));*/
 		
 		/*
 		 * 

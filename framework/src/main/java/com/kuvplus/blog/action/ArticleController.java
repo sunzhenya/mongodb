@@ -31,13 +31,18 @@ public class ArticleController {
 			a.setTitle("mongodb开始实战" + i);
 			a.setContent("mongodb开始实战..内容" + i);
 			articleService.save(a);
+			System.out.println(a);
 		}
 	}
 
 	@Test
 	public void findArticle() {
-		Article a = articleService.findByid("50fd0c36bc40ceec1a44308b");
-		System.out.println(a);
+		Map<String, String> params= new HashMap<String, String>();
+		
+		//Article a = articleService.findtitle(params);
+		//System.out.println(a);
+		//Map<String, String> params= new HashMap<String, String>();
+		
 	}
 
 	@Test
@@ -54,15 +59,16 @@ public class ArticleController {
 		articleService = (ArticleService) app.getBean("articleService");
 	}
 	
-	public static void main(String[] args) {
+public static void main(String[] args) {
 
 			app = new ClassPathXmlApplicationContext(new String[] { "classpath:spring/framework-context.xml",
 					"classpath:spring/mongodb.xml" });
 			articleService = (ArticleService) app.getBean("articleService");
+			//Article a = articleService.findByid("");
 			for (int i = 1; i < 21; i++) {
 				Article a = new Article();
-				a.setTitle("mongodb开始实战" + i);
-				a.setContent("mongodb开始实战..内容" + i);
+				a.setTitle("mongo成功dd了weww " + i);
+				a.setContent("mongodbdd数据库ww..内容" + i);
 				articleService.save(a);
 			}
 	}
